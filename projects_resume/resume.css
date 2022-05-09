@@ -1,0 +1,136 @@
+/* GENERAL STYLING //////////////////////////////////////////////////////////////////////////////////////////*/
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+svg {
+    display: block;
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    margin-top: 15%;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 50pt;
+    letter-spacing: .1em;
+    font-family: 'Barlow', sans-serif !important;
+}
+
+.title {
+    font-weight: 600;
+    font-style: italic;
+    font-size: 25pt;
+    color: #262626;
+    margin-top: -4%;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 20pt;
+}
+
+.cntct {
+    font-weight: 700;
+    font-size: 25pt;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 12pt;
+    color: #262626;
+}
+
+h5 {
+    font-weight: 400;
+    font-size: 12pt;
+    color: #6B6B6B;
+}
+
+.school {
+    font-style: italic;
+    font-size: 15pt;
+    margin-top: 36px;
+}
+
+/* #education {
+    margin-bottom: -3%;
+} */
+
+#umassd, #ccri {
+    line-height: 6px;
+    /* margin-top: -4%; */
+}
+
+
+
+/* GRID SETUP //////////////////////////////////////////////////////////////////////////////////////////*/
+.container {
+    height: 100%;
+    display: grid;
+    grid-column-gap: 2%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "f n n"
+    "f e h"
+    ". c s";
+}
+
+@media screen and (max-width: 1000px) {
+
+    .container {
+        margin-left: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "f"
+        "n"
+        "e"
+        "h"
+        "s"
+        "c";
+    }
+
+    .favicon {
+        grid-area: f;
+        position: inherit !important;
+        height: auto !important;
+        width: 85vw;
+    }
+}
+
+.name {
+    grid-area: n;
+}
+
+.contact {
+    grid-area: c;
+}
+
+.education {
+    grid-area: e;
+}
+
+.hard-skills {
+    grid-area: h;
+}
+
+.soft-skills {
+    grid-area: s;
+}
+
+.favicon {
+    grid-area: f;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}

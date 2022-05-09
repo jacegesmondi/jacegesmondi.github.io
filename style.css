@@ -1,0 +1,212 @@
+/* GENERAL STYLING //////////////////////////////////////////////////////////////////////////////////////////*/
+body {
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 25pt;
+    letter-spacing: 0.3em;
+    line-height: 36px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 25pt;
+}
+
+p {
+    font-weight: 400;
+    font-size: 20pt;
+    line-height: 36px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 18pt;
+}
+
+
+
+/* MOBILE GRID SETUP //////////////////////////////////////////////////////////////////////////////////////////*/
+#container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh auto auto auto;
+    grid-template-areas: 
+    "m"
+    "b"
+    "g"
+    "a"
+    "f";
+}
+
+
+
+/* MENU //////////////////////////////////////////////////////////////////////////////////////////*/
+#menu {
+    grid-area: m;
+    position: relative;
+    background-color: white;
+    z-index: 9999;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "n"
+    "s";
+}
+
+.navigation {
+    grid-area: n;
+    display: flex;
+}
+
+.nav-flex {
+    flex: 1;
+}
+
+#favicon {
+    grid-area: s;
+    height: 80%;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+#work, #about, #home {
+    font-size: 35pt;
+    letter-spacing: .1em;
+    line-height: 160%;
+    text-align: center;
+    margin-top: 20%;
+    display: block;
+}
+
+.blackbox {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+/* GALLERY //////////////////////////////////////////////////////////////////////////////////////////*/
+#gallery {
+    grid-area: g;
+    position: relative;
+    padding: 1.5%;
+    background-color: white;
+    z-index: 9999;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+}
+
+.project-header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.vertical {
+    grid-row: span 3;
+}
+
+.square {
+    grid-row: span 2;
+}
+
+
+
+/* ABOUT ME //////////////////////////////////////////////////////////////////////////////////////////*/
+#aboutme {
+    grid-area: a;
+    position: relative;
+    padding: 3%;
+    background-color: white;
+    z-index: 9999;
+}
+
+#res-link {
+    text-align: center;
+    letter-spacing: auto;
+    font-weight: 400;
+    font-size: 30pt;
+    display: block;
+}
+
+#res-div {
+    margin-top: 24px;
+    width: 40%;
+    min-width: 200px;
+    border: solid black 1px;
+}
+
+
+
+/* FOOTER //////////////////////////////////////////////////////////////////////////////////////////*/
+#footer {
+    grid-area: f;
+    position: relative;
+    padding: 15% 3% 3% 3%;
+    background-color: white;
+    z-index: 9999;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: 
+    "foot . insta";
+}
+
+#foot {
+    margin-top: 50%;
+    grid-area: foot;
+    line-height: 0;
+}
+
+#instalink {
+    grid-area: insta;
+    width: 60%;
+    height: 60%;
+    display: block;
+    margin-left: auto;
+}
+
+
+
+/* PROJECT PAGE //////////////////////////////////////////////////////////////////////////////////////////*/
+#project-page {
+    grid-area: b;
+    position: relative;
+    padding: 9%;
+    height: fit-content;
+    z-index: 9999;
+}
+
+#project-page p {
+    font-style: italic;
+}
+
+#project-page img {
+    display: block;
+    border: solid black 2px;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

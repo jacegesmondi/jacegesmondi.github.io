@@ -1,0 +1,131 @@
+/* DESKTOP GRID SETUP //////////////////////////////////////////////////////////////////////////////////////////*/
+@media screen and (min-width: 1050px) {
+    
+    #container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        "m b b"
+        ". g g"
+        ". a a"
+        ". f f";
+        
+    }
+
+
+
+    /* MENU //////////////////////////////////////////////////////////////////////////////////////////*/
+    #menu {
+        grid-area: m;
+        position: sticky !important;
+        background-color: white;
+        top: 0;
+        height: 100vh;
+        z-index: 9999;
+
+        display: block;
+    }
+
+    #favicon {
+        height: 55%;
+        width: 55%;
+        margin-bottom: -5%;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    #work, #about, #home{
+        font-size: 18pt;
+    }
+
+    .blackbox {
+        width: 60%;
+    }
+
+
+
+    /* ABOUT ME //////////////////////////////////////////////////////////////////////////////////////////*/
+    #res-link {
+        font-size: 18pt;
+    }
+    
+    #res-div {
+        width: 20%;
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: 25pt;
+        line-height: 24px;
+    }
+
+    p {
+        font-size: 16pt;
+        line-height: 30px;
+        margin-right: 20%;
+    }
+
+
+
+    /* FOOTER //////////////////////////////////////////////////////////////////////////////////////////*/
+    #foot {
+        margin-top: 20%;
+    }
+    
+    #instalink {
+        width: 25%;
+        height: 25%;
+    }
+
+    h3 {
+        font-size: 14pt;
+    }
+
+
+
+    /* GALLERY //////////////////////////////////////////////////////////////////////////////////////////*/
+    #gallery {
+        grid-area: g;
+        position: relative;
+        padding: 1.5%;
+        background-color: white;
+        z-index: 9999;
+    
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+    
+    .projects {
+        border: solid black 1px !important;
+    }
+
+
+
+    /* BANNER //////////////////////////////////////////////////////////////////////////////////////////*/
+     #banner {
+        grid-area: b;
+        position: relative;
+        height: 100vh;
+        z-index: 0;
+    }
+
+    #banner-image {
+        position: fixed;
+        height: 100vh;
+        width: 70%;
+        background-image: url("assets/banner.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+    }
+
+    #project-page img {
+        border: solid black 1px;
+    }
+}
